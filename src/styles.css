@@ -117,7 +117,8 @@ h1 { margin: 0; font-size: 28px; line-height: 1.1; }
   background: white;
   border-radius: 7px;
   padding: 7px 10px;
-  color: #b7beca;
+  color: #182230;
+  cursor: pointer;
 }
 
 .filter-btn {
@@ -128,7 +129,12 @@ h1 { margin: 0; font-size: 28px; line-height: 1.1; }
   font-size: 12px;
 }
 
-.filter:focus { outline: none; }
+.filter:focus {
+  outline: 2px solid #2d6cdf;
+  outline-offset: 1px;
+  border-color: #2d6cdf;
+  box-shadow: 0 0 0 3px rgba(45, 108, 223, 0.2);
+}
 
 .table-wrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; }
