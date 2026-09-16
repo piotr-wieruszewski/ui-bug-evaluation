@@ -88,7 +88,7 @@ function App() {
               <div className="bars">
                 {bars.map((height, index) => (
                   <div
-                    className={`bar-wrapper ${index === 3 ? "misaligned" : ""}`}
+                    className="bar-wrapper"
                     key={index}
                   >
                     <div
