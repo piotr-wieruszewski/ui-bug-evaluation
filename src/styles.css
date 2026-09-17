@@ -26,6 +26,10 @@ button, select { font: inherit; }
 }
 
 .nav-item {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: left;
   display: flex;
   align-items: flex-start;
   gap: 8px;
@@ -145,10 +149,13 @@ h1 { margin: 0; font-size: 28px; font-weight: 700; line-height: 1.1; }
   font-size: 12px;
 }
 
-.filter:focus-visible {
+button:focus-visible,
+select:focus-visible {
   outline: 2px solid #2d6cdf;
   outline-offset: 2px;
 }
+
+.nav-item:focus-visible { outline-color: #fff; }
 
 .table-wrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; }
@@ -234,7 +241,7 @@ th { color: #778295; font-weight: 600; }
   }
   .logo { margin: 0 12px 12px; }
   .sidebar nav { display: flex; flex-wrap: wrap; gap: 4px; }
-  .nav-item { margin: 0; overflow-wrap: anywhere; }
+  .nav-item { width: auto; margin: 0; overflow-wrap: anywhere; }
   .main { padding: 20px 16px; }
 }
 

@@ -37,11 +37,11 @@ function App() {
       <aside className="sidebar">
         <div className="logo">UI Eval</div>
         <nav aria-label="Main navigation">
-          <div className="nav-item active"><span className="nav-icon" aria-hidden="true">▦</span><span className="nav-label">Dashboard</span></div>
-          <div className="nav-item"><span className="nav-icon" aria-hidden="true">◷</span><span className="nav-label">Activity</span></div>
-          <div className="nav-item"><span className="nav-icon" aria-hidden="true">♙</span><span className="nav-label">Customers</span></div>
-          <div className="nav-item"><span className="nav-icon" aria-hidden="true">▤</span><span className="nav-label">Reports</span></div>
-          <div className="nav-item"><span className="nav-icon" aria-hidden="true">⚙</span><span className="nav-label">Settings and preferences</span></div>
+          <button type="button" className="nav-item active"><span className="nav-icon" aria-hidden="true">▦</span><span className="nav-label">Dashboard</span></button>
+          <button type="button" className="nav-item"><span className="nav-icon" aria-hidden="true">◷</span><span className="nav-label">Activity</span></button>
+          <button type="button" className="nav-item"><span className="nav-icon" aria-hidden="true">♙</span><span className="nav-label">Customers</span></button>
+          <button type="button" className="nav-item"><span className="nav-icon" aria-hidden="true">▤</span><span className="nav-label">Reports</span></button>
+          <button type="button" className="nav-item"><span className="nav-icon" aria-hidden="true">⚙</span><span className="nav-label">Settings and preferences</span></button>
         </nav>
       </aside>
 
