@@ -1,4 +1,4 @@
-import { StrictMode, useState } from "react";
+import { StrictMode, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 
@@ -9,14 +9,27 @@ const orders = [
   ["#10479", "Oliver Smith", "14 Sep", "Failed"],
 ];
 
-const bars = [52, 70, 44, 86, 63, 94];
+const initialBars = [52, 70, 44, 86, 63, 94];
 
 function App() {
+  const [bars, setBars] = useState(initialBars);
   const [toast, setToast] = useState(false);
 
-  function refresh() {
+  useEffect(() => {
+    if (bars === initialBars) return;
+
+    // Report success after the updated sales have been committed to the chart.
     setToast(true);
-    window.setTimeout(() => setToast(false), 1200);
+    const timeout = window.setTimeout(() => setToast(false), 1200);
+    return () => window.clearTimeout(timeout);
+  }, [bars]);
+
+  function refresh() {
+    setToast(false);
+    // Deterministic local sample data, kept within 35–95 percent.
+    setBars(previous => previous.map((height, index) =>
+      35 + ((height - 35 + 7 + index * 3) % 61)
+    ));
   }
 
   return (
@@ -110,7 +123,7 @@ function App() {
       </main>
 
       <div className={`toast ${toast ? "visible" : ""}`} role="status">
-        Data refreshed
+        {toast ? "Data refreshed" : ""}
       </div>
     </div>
   );
