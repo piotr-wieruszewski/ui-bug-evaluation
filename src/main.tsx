@@ -24,11 +24,26 @@ function App() {
       <aside className="sidebar">
         <div className="logo">UI Eval</div>
         <nav aria-label="Main navigation">
-          <div className="nav-item active">▦ Dashboard</div>
-          <div className="nav-item">◷ Activity</div>
-          <div className="nav-item">♙ Customers</div>
-          <div className="nav-item">▤ Reports</div>
-          <div className="nav-item">⚙ Settings and preferences</div>
+          <div className="nav-item active">
+            <span className="nav-icon" aria-hidden="true">▦</span>
+            <span className="nav-label">Dashboard</span>
+          </div>
+          <div className="nav-item">
+            <span className="nav-icon" aria-hidden="true">◷</span>
+            <span className="nav-label">Activity</span>
+          </div>
+          <div className="nav-item">
+            <span className="nav-icon" aria-hidden="true">♙</span>
+            <span className="nav-label">Customers</span>
+          </div>
+          <div className="nav-item">
+            <span className="nav-icon" aria-hidden="true">▤</span>
+            <span className="nav-label">Reports</span>
+          </div>
+          <div className="nav-item">
+            <span className="nav-icon" aria-hidden="true">⚙</span>
+            <span className="nav-label">Settings and preferences</span>
+          </div>
         </nav>
       </aside>
 
