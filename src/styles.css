@@ -26,6 +26,10 @@ button, select { font: inherit; }
 }
 
 .nav-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 18px;
   padding: 11px 12px;
   margin: 5px 0;
   border-radius: 8px;
@@ -34,6 +38,17 @@ button, select { font: inherit; }
 }
 
 .nav-item.active { background: #2d6cdf; color: white; }
+
+.nav-icon {
+  flex: 0 0 16px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.nav-label { min-width: 0; }
 
 .main {
   flex: 1;
@@ -226,6 +241,6 @@ th { color: #778295; font-weight: 600; }
 @media (max-width: 480px) {
   .cards { grid-template-columns: 1fr; }
   .topbar { align-items: flex-start; }
-  .avatar { margin-left: 12px; flex-shrink: 0; }
+  .avatar { margin-left: 12px; }
   th:nth-child(3), td:nth-child(3) { display: none; }
 }
