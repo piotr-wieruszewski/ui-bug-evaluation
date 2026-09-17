@@ -35,9 +35,24 @@ button, select { font: inherit; }
   color: #b9c2d3;
   cursor: pointer;
   line-height: 1.2;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-item:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .nav-item.active { background: #2d6cdf; color: white; }
+
+.nav-item:focus,
+.nav-item:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
 
 .nav-icon {
   display: inline-flex;
@@ -82,6 +97,12 @@ h1 { margin: 0; font-size: 28px; font-weight: 700; line-height: 1.1; }
   font-weight: 700;
   color: #2d6cdf;
   cursor: pointer;
+}
+
+.avatar:focus,
+.avatar:focus-visible {
+  outline: 2px solid #2d6cdf;
+  outline-offset: 2px;
 }
 
 .cards {
@@ -150,7 +171,19 @@ h1 { margin: 0; font-size: 28px; font-weight: 700; line-height: 1.1; }
   font-size: 12px;
 }
 
-.filter:focus {
+.filter-btn:hover {
+  text-decoration: underline;
+}
+
+.filter-btn:focus,
+.filter-btn:focus-visible {
+  outline: 2px solid #2d6cdf;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.filter:focus,
+.filter:focus-visible {
   outline: 2px solid #2d6cdf;
   outline-offset: 1px;
   border-color: #2d6cdf;
@@ -245,6 +278,7 @@ th { color: #778295; font-weight: 600; }
     gap: 8px;
   }
   .nav-item {
+    width: auto;
     margin: 0;
     padding: 8px 12px;
     font-size: 13px;
